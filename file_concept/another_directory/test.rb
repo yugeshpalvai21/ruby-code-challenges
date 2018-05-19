@@ -1,0 +1,1 @@
+puts "File from another directory"
