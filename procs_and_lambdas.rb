@@ -33,20 +33,20 @@
 first_proc = Proc.new { |num| 
     num * num
     puts "Overriding generic return statement"
-    return "Over rided written value"
+    "Over rided written value"
 }
 
 
 first_block = ->(num) {
-    return num * num
+    num * num
     puts "Overriding generic return statement"
-    return "Over rided written value"
+    "Over rided written value"
 }
 
 p first_proc.class.ancestors
 p first_block.class.ancestors
 
-puts first_proc.call(5)
-puts first_block.call(10)
+puts first_proc.call(5,10)
+puts first_block.call(10,5)
 
 
