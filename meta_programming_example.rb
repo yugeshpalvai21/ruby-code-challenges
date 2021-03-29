@@ -12,6 +12,11 @@ class User
       self.send(__method__.to_s.split("_")[-1]) == att_val ? att_val : 'Not Found'
     end
   end
+
+  def method_missing(method_name, *arguments, &block)
+    "It Seems Method #{method_name} Not Available"
+  end
+
 end
 
 user = User.new('yugesh', 'Ind')
@@ -32,3 +37,5 @@ p User.create_method('location')
 p user.methods - user.class.superclass.new.methods
 
 p user.find_by_location('Ind')
+
+p user.details
