@@ -4,10 +4,14 @@ class Person
         @people = people.flatten
     end
 
+    def map(&block)
+        result = []
+        self.each { |mem| result << block.call(mem) }
+        result
+    end
+
     def each(&block)
-        @people.each do |member|
-            block.call(member)
-        end
+        @people.each { |member| block.call(member) }
     end
 end
 
