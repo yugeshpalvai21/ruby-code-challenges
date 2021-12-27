@@ -6,6 +6,10 @@
 # STEP2 - Find Prime Factores 
 # STEP3 - Find Largest Number
 
+
+# LOGIC
+# first_prime * second_prime * .. * last_prime * reminder
+
 def prime? number
   factores = [*2...(number/2).floor].select { |factor| number%factor == 0 }
   factores.empty? ? true : false
