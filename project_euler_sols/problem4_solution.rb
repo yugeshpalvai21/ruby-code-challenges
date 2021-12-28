@@ -20,11 +20,12 @@ def find_largest_palindrom
       end
       num2 -= 1
     end
+    break if num2 >= (num1 -1)
     num2 = 999
     num1 -= 1 
   end
 
-  largest_palindrome
+  [largest_palindrome, num1, num2]
 end
 
 p find_largest_palindrom
