@@ -1,7 +1,9 @@
 def factorial num
-  result = 1
-  num.downto(1) { |i| result *= i }
-  result
+  return 1 if num == 1
+  num * factorial(num-1)
+  # result = 1
+  # num.downto(1) { |i| result *= i }
+  # result
 
 end
 
