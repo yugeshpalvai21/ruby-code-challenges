@@ -1,12 +1,17 @@
 def fraction_calculator frac1, frac2, operator
-  case operator
-  when "*" then (Rational(frac1) * Rational(frac2)).to_s
-  when "+" then (Rational(frac1) + Rational(frac2)).to_s
-  when "-" then (Rational(frac1) - Rational(frac2)).to_s
-  when "/" then (Rational(frac1) / Rational(frac2)).to_s
+  num1 = Rational(frac1)
+  num2 = Rational(frac2)
+
+  result = case operator
+  when "*" then num1 * num2
+  when "+" then num1 + num2
+  when "-" then num1 - num2
+  when "/" then num1 / num2
   else
     return 0
   end
+  
+  result.to_s
 end
 
 RSpec.describe "#rational_arithmetic" do
