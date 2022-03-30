@@ -1,14 +1,11 @@
 def hashed_fizz_buzz num
   result = Hash.new
   1.upto(num) do |num|
-    result["#{num}"] = if num%5 == 0 && num%3 == 0
-      "fizzbuzz"
-    elsif num%5 == 0
-      "buzz"
-    elsif num%3 == 0
-      "fizz"
-    else
-       "#{num}"
+    result["#{num}"] = case !!num 
+    when num%5 == 0 && num%3 == 0 then "fizzbuzz"
+    when num%5 == 0 then "buzz"
+    when num%3 == 0 then "fizz"
+    else "#{num}"
     end
   end
   result
