@@ -1,7 +1,9 @@
 def array_rotation arr, num
-  result = Array.new(arr.length)
-  arr.each_with_index { |ele, idx| result[idx-num] = ele }
-  result
+  arr.rotate(num)
+  # Second Solution
+  # result = Array.new(arr.length)
+  # arr.each_with_index { |ele, idx| result[idx-num] = ele }
+  # result
 end
 
 RSpec.describe "#array_rotation" do
