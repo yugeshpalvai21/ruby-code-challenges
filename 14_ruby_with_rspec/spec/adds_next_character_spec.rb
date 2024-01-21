@@ -1,4 +1,4 @@
-require 'string_manipulation'
+require_relative '../bin/string_manipulation'
 
 RSpec.describe StringManpulation do
     describe '#increment_string' do
