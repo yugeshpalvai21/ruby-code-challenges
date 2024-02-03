@@ -6,11 +6,11 @@
 # result = full_names.sort { |first, last| first.split(" ")[1] <=> last.split(" ")[1] }
 # puts result.inspect
 
-#single line solution
+#shorthand solution
 
-result = File.open("sample_text.txt", "r").read.split("\n").sort { |first, last| first.split(" ")[1] <=> last.split(" ")[1] }
+result = File.open("sample_text.txt", "r")
+             .read
+             .split("\n")
+             .sort { |person_one, person_two| person_one.split.last <=> person_two.split.last }
 
 puts result.inspect
-
-
-
