@@ -1,3 +1,5 @@
+# sort list of states based on length of letters
+
 states = [ "Andhra Pradesh",
 "Arunachal Pradesh",
 "Assam",
@@ -35,6 +37,10 @@ states = [ "Andhra Pradesh",
 "Lakshadweep",
 "Puducherry"]
 
-#puts states.sort.reverse.inspect
+# puts states.sort.reverse.inspect
 
-puts (states.sort { |val1, val2| val2.length <=> val1.length }).inspect 
+puts "##### sorting in asccending order #######"
+puts states.sort { |val1, val2| val1.to_s.length <=> val2.to_s.length }
+
+puts "##### sorting in descending order #######"
+puts (states.sort { |val1, val2| val2.length <=> val1.length })

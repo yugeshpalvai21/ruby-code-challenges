@@ -1,3 +1,5 @@
+# multiplication table of given number
+
 def multiplication_table number
     hash = {}
 
