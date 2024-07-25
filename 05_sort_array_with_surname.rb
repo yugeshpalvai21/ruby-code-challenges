@@ -1,16 +1,13 @@
-# file_content = File.open("sample_text.txt", "r").read
-# full_names = file_content.split("\n")
-# puts full_names.inspect
-# puts full_names.sort.inspect
+# this code mainly focuses on File concept in Ruby
 
-# result = full_names.sort { |first, last| first.split(" ")[1] <=> last.split(" ")[1] }
-# puts result.inspect
+# given scenarion, we have file a that stores each line with person name (first_name last_name)
+# and we need to sort those names based on their surnames
 
-#shorthand solution
+# like "Yugesh Palvai, John Doe" => "John Doe, Yugesh Palvai"
 
-result = File.open("sample_text.txt", "r")
-             .read
+
+result = File.read("sample_text.txt")
              .split("\n")
              .sort { |person_one, person_two| person_one.split.last <=> person_two.split.last }
 
-puts result.inspect
+puts result
