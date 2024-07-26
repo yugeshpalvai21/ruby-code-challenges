@@ -1,19 +1,8 @@
 # multiplication table of given number
+# when given number, it prints multiples of 1 to 10
 
-def multiplication_table number
-    hash = {}
-
-    1.upto(number) do |num|
-        num_table = []
-        1.upto(10) do |digit|
-            num_table << digit * num
-        end
-        hash[num] = num_table
-    end
-
-    hash
+def multiplication_table number    
+    (1..10).each { |num| puts "#{number} * #{num} = #{number*num}"  }
 end
 
-table =  multiplication_table 3
-
-p table
+multiplication_table 216
