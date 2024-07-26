@@ -1,4 +1,5 @@
-# sort list of states based on length of letters
+# sort list of states based on length of characted in each state, 
+# this needs be in descending order i.e state with more characters comes first
 
 states = [ "Andhra Pradesh",
 "Arunachal Pradesh",
@@ -39,8 +40,8 @@ states = [ "Andhra Pradesh",
 
 # puts states.sort.reverse.inspect
 
-puts "##### sorting in asccending order #######"
-puts states.sort { |val1, val2| val1.to_s.length <=> val2.to_s.length }
-
 puts "##### sorting in descending order #######"
-puts (states.sort { |val1, val2| val2.length <=> val1.length })
+puts (states.sort { |state_one, state_two| state_two.length <=> state_one.length })
+
+puts "##### sorting in ascending order #######"
+puts states.sort { |state_one, state_two| state_one.to_s.size <=> state_two.to_s.size }
