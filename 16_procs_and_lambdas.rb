@@ -25,16 +25,17 @@
 
 
 
-# # Differences Between Proc and Lambda
+# Differences Between Proc and Lambda
 
-# # 1. Proc return last evaluate return value, Lambda first return value
+# 1. Proc return last evaluate return value, Lambda first return value
+# 2. Proc doesn't care about no.of arugemets whent its called where lamda does
 
 
-first_proc = Proc.new { |num| 
+first_proc = Proc.new do |num| 
     num * num
     puts "Overriding generic return statement"
     "Over rided written value"
-}
+end
 
 
 first_block = ->(num) {
