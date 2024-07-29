@@ -1,3 +1,6 @@
+# Programm that adds enumarable module to any given custom class 
+# this illustrates ruby meta programming
+
 class Person
     include Enumerable
     def initialize(*people)
