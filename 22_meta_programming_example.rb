@@ -1,4 +1,3 @@
-
 class User
   attr_accessor :name, :location
 
@@ -21,16 +20,18 @@ end
 
 user = User.new('yugesh', 'Ind')
 
-p user
 
-p user.methods - user.class.superclass.new.methods
+
+# p user.methods - user.class.superclass.new.methods
 
 p User.create_method('name')
 
-p user.methods - user.class.superclass.new.methods
+# p user.methods - user.class.superclass.new.methods
 
 p user.find_by_name('yugesh')
 p user.find_by_name('john')
+
+p user.respond_to?(:find_by_name)
 
 p User.create_method('location')
 

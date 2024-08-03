@@ -1,6 +1,6 @@
-players = File.open("players_list.txt").read.split("\n")
+players = File.read("players_list.txt").split("\n")
 
-last_names = players.map { |player| player.split(" ").last}
+last_names = players.map { |player| player.split(" ").last }
 
 puts players.inspect
 puts last_names.inspect

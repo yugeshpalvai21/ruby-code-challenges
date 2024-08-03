@@ -1,5 +1,5 @@
-first_names = File.open("first_names.txt").read.split("\n")
-last_names = File.open("last_names.txt").read.split("\n")
+first_names = File.readlines("first_names.txt").map(&:chomp)
+last_names = File.readlines("last_names.txt").map(&:chomp)
 
 puts first_names.inspect
 puts last_names.inspect
