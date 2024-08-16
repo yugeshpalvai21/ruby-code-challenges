@@ -5,12 +5,16 @@
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find # the sum of the even-valued terms.
 
+def last_two_indexs_sum input
+  input[-1] + input[-2]
+end
+
 def fib_series_sum_generator max_value
   fib_series = [1,2]
 
-  while fib_series[-1] < max_value
-    break if (fib_series[-1] + fib_series[-2]) > max_value
-    fib_series << fib_series[-1] + fib_series[-2]
+  while fib_series.last < max_value
+    break if last_two_indexs_sum(fib_series) > max_value
+    fib_series << last_two_indexs_sum(fib_series)
   end
   
   fib_series.select { |num| num%2 == 0 }.sum
