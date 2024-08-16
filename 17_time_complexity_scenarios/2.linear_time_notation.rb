@@ -16,10 +16,9 @@ def calculate_sum input
   sum
 end
 
-
 p calculate_sum [*1..100]
 
-
+# Take two with iterator
 def calculate_sum_two *input
   input.inject(&:+)
 end
@@ -27,3 +26,7 @@ end
 p calculate_sum_two 1,5,6,3,4,3,6
 
 
+# Take three with single line method
+def calculate_sum_three(input) = input.inject(&:+)
+
+p calculate_sum_three [*1..100]
