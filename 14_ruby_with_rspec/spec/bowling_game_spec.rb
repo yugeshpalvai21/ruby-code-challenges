@@ -34,4 +34,9 @@ RSpec.describe BowlingGame do
 
     expect(subject.score).to eq(24)
   end
+
+  it 'can score a perfect game (all strikes)' do
+    12.times { subject.roll(10) } # 12 strikes for a perfect game
+    expect(subject.score).to eq(300)
+  end
 end 
