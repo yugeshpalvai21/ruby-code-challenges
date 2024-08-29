@@ -22,7 +22,16 @@ RSpec.describe BowlingGame do
     game.roll(5) # spare
     game.roll(3)
     17.times { game.roll(0) }
-    
+
     expect(game.score).to eq(16)
+  end
+
+  it 'can score a strike' do
+    subject.roll(10) # strike
+    subject.roll(3)
+    subject.roll(4)
+    16.times { subject.roll(0) }
+
+    expect(subject.score).to eq(24)
   end
 end 
